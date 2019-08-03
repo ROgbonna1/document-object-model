@@ -1,11 +1,11 @@
-#Document Object Model
+# Document Object Model
 ![The Document Object Model](https://www.w3schools.com/js/pic_htmltree.gif)
 
 * Tree of nodes/elements created by the browser
 * JavaScript can be used to read/write/manipulate to the DOM
 * Object Oriented Representation, meaning nodes have object properties and methods.
 
-##The Document Object
+## The Document Object
 * The `document` object has a number of properties and methods.
 * `document.all` returns an array object that holds all elements of the document object. Array elements are indexed so they can be referenced by index number.
   For example: 
@@ -17,7 +17,7 @@
 
 * Can use the `document` object to select elements. (e.g. `document.forms` will return an indexed collection of all forms in the document.)
 
-###DOM Selectors
+### DOM Selectors
 * Two types of selectors: _single element selectors_, _multiple element selectors_
 
 * **Single Element Selectors**
