@@ -184,7 +184,7 @@ link.removeAttribute('title');
 ### Event Delegation
 * We listen for when an event fires on a parent node and we delegate which child node is affected.
   For Example:
-  ```
+  ```javascript
   document.body.addEventListener('click', deleteItem);
 
   function deleteItem(e){
@@ -192,7 +192,7 @@ link.removeAttribute('title');
      console.log('delete item');
     }
   }
-```
+  ```
 
 ### Local & Session Storage
 * `localStorage` is similar to `sessionStorage`, except that while data stored in `localStorage` has no expiration time, data stored in `sessionStorage` gets cleared when the page session ends — that is, when the page is closed.
@@ -202,47 +202,47 @@ link.removeAttribute('title');
   Example code:
   ```javascript
   // set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '30');
+  // localStorage.setItem('name', 'John');
+  // localStorage.setItem('age', '30');
 
-// set session storage item
-// sessionStorage.setItem('name', 'Beth');
+  // set session storage item
+  // sessionStorage.setItem('name', 'Beth');
 
-// remove from storage
-// localStorage.removeItem('name');
+  // remove from storage
+  // localStorage.removeItem('name');
 
-// get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
+  // get from storage
+  // const name = localStorage.getItem('name');
+  // const age = localStorage.getItem('age');
 
-// // clear local storage
-// localStorage.clear();
+  // // clear local storage
+  // localStorage.clear();
 
-// console.log(name, age);
+  // console.log(name, age);
 
-document.querySelector('form').addEventListener('submit', function(e){
-  const task = document.getElementById('task').value;
+  document.querySelector('form').addEventListener('submit', function(e){
+    const task = document.getElementById('task').value;
 
-  let tasks;
+    let tasks;
 
-  if(localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
+    if(localStorage.getItem('tasks') === null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
 
-  tasks.push(task);
+    tasks.push(task);
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 
-  alert('Task saved');
+    alert('Task saved');
 
-  e.preventDefault();
-});
+    e.preventDefault();
+  });
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
+  const tasks = JSON.parse(localStorage.getItem('tasks'));
 
-tasks.forEach(function(task){
-  console.log(task);
-});
-```
+  tasks.forEach(function(task){
+    console.log(task);
+  });
+  ```
